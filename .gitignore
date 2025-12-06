@@ -5,6 +5,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.python-version
 
 # Virtual env
 .venv/
@@ -92,3 +93,10 @@ $RECYCLE.BIN/
 
 # Linux
 *~
+
+###############################
+# Output files
+###############################
+src/cpp/
+src/python/dataset/
+src/python/models/

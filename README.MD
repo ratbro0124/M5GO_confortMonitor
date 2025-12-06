@@ -1,9 +1,9 @@
 # 【IoT】基礎設計課題：環境モニタリング
 
-<!-- ## 概要
-執筆中...
+## 概要
+本リポジトリは、知能プログラミング演習II　IoT2週目向けのサンプルコードを公開するものです。
 
-<br> -->
+<br>
 
 ## 1. 必要なハードウェア
 - M5GO IoT スターターキット V2.7
@@ -57,7 +57,8 @@
   ---
   bash
   ```bash
-  $ xxd -i models/comfort_model.tflite > ../cpp/model_data.cc
+  cd models
+  xxd -i comfort_model.tflite > ../../cpp/model_data.cc
   ```
   ---
 6.	Arduino IDEでインポートするためのヘッダファイルを作成
@@ -73,11 +74,13 @@
   #endif  // MODEL_DATA_H_
   ```
   ---
-7.  model_data.ccを編集（先頭に #include を追加、末尾の文頭に const を追加）
+7.  model_data.ccを編集（先頭に #include を追加、変数に const 属性を追加）
   ---
   model_data.cc
   ```cpp
   #include "model_data.h"
+
+  const unsigned char // 以下省略
 
   // 中略
 
